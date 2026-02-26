@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "bun: watch",
+      "command": "${env:HOME}/.bun/bin/bun",
+      "args": ["run", "watch"],
+      "problemMatcher": "$tsc-watch",
+      "isBackground": true,
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "type": "shell",
+      "label": "bun: compile",
+      "command": "${env:HOME}/.bun/bin/bun",
+      "args": ["run", "compile"],
+      "problemMatcher": "$tsc",
+      "group": "build"
+    }
+  ]
+}

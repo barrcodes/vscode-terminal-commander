@@ -1,0 +1,10 @@
+.vscode/**
+.vscode-test/**
+src/**
+tsconfig.json
+bun.lock
+CONTRIBUTING.md
+keybindings.json
+brand.png
+node_modules/**
+**/*.ts

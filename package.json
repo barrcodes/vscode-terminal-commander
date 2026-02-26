@@ -1,0 +1,40 @@
+{
+  "name": "vscode-terminal-commander",
+  "displayName": "Terminal Commander",
+  "description": "Create, split, focus, send, and close VS Code terminals by name",
+  "version": "0.0.1",
+  "publisher": "barrcodes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barrcodes/vscode-terminal-commander.git"
+  },
+  "icon": "icon.png",
+  "engines": { "vscode": "^1.74.0" },
+  "categories": ["Other"],
+  "keywords": ["terminal", "automation", "named terminal", "remote control"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "terminalManager.createByName", "title": "Terminal Commander: Create by Name" },
+      { "command": "terminalManager.splitByName",  "title": "Terminal Commander: Split by Name" },
+      { "command": "terminalManager.focusByName",  "title": "Terminal Commander: Focus by Name" },
+      { "command": "terminalManager.sendByName",   "title": "Terminal Commander: Send to by Name" },
+      { "command": "terminalManager.closeByName",  "title": "Terminal Commander: Close by Name" }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "bun run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
