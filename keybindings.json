@@ -1,11 +1,11 @@
 [
-  { "key": "ctrl+alt+1", "command": "terminalManager.createByName", "args": { "name": "test", "command": "echo hello\n" } },
-  { "key": "ctrl+alt+2", "command": "terminalManager.splitByName",  "args": { "name": "split", "parentName": "test", "command": "echo split\n" } },
-  { "key": "ctrl+alt+3", "command": "terminalManager.focusByName",  "args": { "name": "test" } },
-  { "key": "ctrl+alt+4", "command": "terminalManager.sendByName",   "args": { "name": "test", "text": "echo sent\n" } },
-  { "key": "ctrl+alt+5", "command": "terminalManager.createByName",  "args": { "name": "default" } },
-  { "key": "ctrl+alt+6", "command": "terminalManager.splitByName",  "args": { "name": "defaultsplit" } },
-  { "key": "ctrl+alt+7", "command": "terminalManager.closeByName",  "args": { "name": "split" } },
-  { "key": "ctrl+alt+8", "command": "terminalManager.closeByName",  "args": { "name": "test" } },
-  { "key": "ctrl+alt+9", "command": "terminalManager.sendByName",   "args": { "name": "doesnotexist", "text": "nope\n" } }
+  { "key": "ctrl+alt+1", "command": "terminalMap.createByName", "args": { "name": "test", "command": "echo hello\n" } },
+  { "key": "ctrl+alt+2", "command": "terminalMap.splitByName",  "args": { "name": "split", "parentName": "test", "command": "echo split\n" } },
+  { "key": "ctrl+alt+3", "command": "terminalMap.focusByName",  "args": { "name": "test" } },
+  { "key": "ctrl+alt+4", "command": "terminalMap.sendByName",   "args": { "name": "test", "text": "echo sent\n" } },
+  { "key": "ctrl+alt+5", "command": "terminalMap.createByName",  "args": { "name": "default" } },
+  { "key": "ctrl+alt+6", "command": "terminalMap.splitByName",  "args": { "name": "defaultsplit" } },
+  { "key": "ctrl+alt+7", "command": "terminalMap.closeByName",  "args": { "name": "split" } },
+  { "key": "ctrl+alt+8", "command": "terminalMap.closeByName",  "args": { "name": "test" } },
+  { "key": "ctrl+alt+9", "command": "terminalMap.sendByName",   "args": { "name": "doesnotexist", "text": "nope\n" } }
 ]

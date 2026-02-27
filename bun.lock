@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "vscode-terminal-commander",
+      "name": "vscode-terminal-map",
       "devDependencies": {
         "@types/bun": "latest",
         "@types/node": "^20",

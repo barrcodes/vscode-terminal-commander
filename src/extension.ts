@@ -33,10 +33,10 @@ export function activate(context: vscode.ExtensionContext): void {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'terminalManager.createByName',
+      'terminalMap.createByName',
       (args: { name?: string; command?: string } = {}) => {
         if (!args.name) {
-          vscode.window.showErrorMessage('terminalManager.createByName: "name" argument is required');
+          vscode.window.showErrorMessage('terminalMap.createByName: "name" argument is required');
           return;
         }
         const existing = getTerminal(args.name);
@@ -54,17 +54,17 @@ export function activate(context: vscode.ExtensionContext): void {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'terminalManager.splitByName',
+      'terminalMap.splitByName',
       async (args: { name?: string; parentName?: string; command?: string } = {}) => {
         if (!args.name) {
-          vscode.window.showErrorMessage('terminalManager.splitByName: "name" argument is required');
+          vscode.window.showErrorMessage('terminalMap.splitByName: "name" argument is required');
           return;
         }
         const parent =
           (args.parentName ? getTerminal(args.parentName) : undefined) ??
           vscode.window.activeTerminal;
         if (!parent) {
-          vscode.window.showErrorMessage('terminalManager.splitByName: no active terminal to split');
+          vscode.window.showErrorMessage('terminalMap.splitByName: no active terminal to split');
           return;
         }
         parent.show(true);
@@ -87,15 +87,15 @@ export function activate(context: vscode.ExtensionContext): void {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'terminalManager.focusByName',
+      'terminalMap.focusByName',
       (args: { name?: string } = {}) => {
         if (!args.name) {
-          vscode.window.showErrorMessage('terminalManager.focusByName: "name" argument is required');
+          vscode.window.showErrorMessage('terminalMap.focusByName: "name" argument is required');
           return;
         }
         const terminal = getTerminal(args.name);
         if (!terminal) {
-          vscode.window.showErrorMessage(`terminalManager.focusByName: no terminal named "${args.name}"`);
+          vscode.window.showErrorMessage(`terminalMap.focusByName: no terminal named "${args.name}"`);
           return;
         }
         terminal.show();
@@ -105,15 +105,15 @@ export function activate(context: vscode.ExtensionContext): void {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'terminalManager.sendByName',
+      'terminalMap.sendByName',
       (args: { name?: string; text?: string } = {}) => {
         if (!args.name || args.text === undefined) {
-          vscode.window.showErrorMessage('terminalManager.sendByName: "name" and "text" arguments are required');
+          vscode.window.showErrorMessage('terminalMap.sendByName: "name" and "text" arguments are required');
           return;
         }
         const terminal = getTerminal(args.name);
         if (!terminal) {
-          vscode.window.showErrorMessage(`terminalManager.sendByName: no terminal named "${args.name}"`);
+          vscode.window.showErrorMessage(`terminalMap.sendByName: no terminal named "${args.name}"`);
           return;
         }
         terminal.show();
@@ -124,15 +124,15 @@ export function activate(context: vscode.ExtensionContext): void {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      'terminalManager.closeByName',
+      'terminalMap.closeByName',
       (args: { name?: string } = {}) => {
         if (!args.name) {
-          vscode.window.showErrorMessage('terminalManager.closeByName: "name" argument is required');
+          vscode.window.showErrorMessage('terminalMap.closeByName: "name" argument is required');
           return;
         }
         const terminal = getTerminal(args.name);
         if (!terminal) {
-          vscode.window.showErrorMessage(`terminalManager.closeByName: no terminal named "${args.name}"`);
+          vscode.window.showErrorMessage(`terminalMap.closeByName: no terminal named "${args.name}"`);
           return;
         }
         terminal.dispose();

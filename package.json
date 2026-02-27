@@ -1,27 +1,27 @@
 {
-  "name": "vscode-terminal-commander",
-  "displayName": "Terminal Commander",
+  "name": "vscode-terminal-map",
+  "displayName": "Terminal Map",
   "description": "Create, split, focus, send, and close VS Code terminals by name",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "barrcodes",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barrcodes/vscode-terminal-commander.git"
+    "url": "https://github.com/barrcodes/vscode-terminal-map.git"
   },
   "icon": "icon.png",
   "engines": { "vscode": "^1.74.0" },
   "categories": ["Other"],
-  "keywords": ["terminal", "automation", "named terminal", "remote control"],
+  "keywords": ["vscode", "extension", "terminal", "automation", "named terminal", "remote control"],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      { "command": "terminalManager.createByName", "title": "Terminal Commander: Create by Name" },
-      { "command": "terminalManager.splitByName",  "title": "Terminal Commander: Split by Name" },
-      { "command": "terminalManager.focusByName",  "title": "Terminal Commander: Focus by Name" },
-      { "command": "terminalManager.sendByName",   "title": "Terminal Commander: Send to by Name" },
-      { "command": "terminalManager.closeByName",  "title": "Terminal Commander: Close by Name" }
+      { "command": "terminalMap.createByName", "title": "Terminal Map: Create by Name" },
+      { "command": "terminalMap.splitByName",  "title": "Terminal Map: Split by Name" },
+      { "command": "terminalMap.focusByName",  "title": "Terminal Map: Focus by Name" },
+      { "command": "terminalMap.sendByName",   "title": "Terminal Map: Send to by Name" },
+      { "command": "terminalMap.closeByName",  "title": "Terminal Map: Close by Name" }
     ]
   },
   "scripts": {
